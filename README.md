@@ -2,7 +2,7 @@
 
 This project applies neural style transfer to blend the content of one image with the style of another using a pre-trained model from [TensorFlow Hub](https://tfhub.dev). The model applies artistic styles from one image onto the structure of another, creating a unique, stylized output.
 
-![Sample Output](sample_output.jpg)
+![Original Image](media/target.jpg) ![Sample Output](sample_output.jpg)
 
 ## Features
 
@@ -46,7 +46,13 @@ This project applies neural style transfer to blend the content of one image wit
     ```
 
 2. **View the Output**: 
-    The script will display the stylized image. Modify ```tensor_to_image(hub_model(content_image, style_image)[0]).show()``` in style_transfer.py if you want to save the output instead:
+    The script will display the stylized image. Modify 
+    ```bash
+    tensor_to_image(hub_model(content_image, style_image)[0]).show()
+    ``` 
+    
+    in style_transfer.py if you want to save the output instead:
+    
     ```bash
     tensor_to_image(hub_model(content_image, style_image)[0]).save("output.jpg")
     ```
